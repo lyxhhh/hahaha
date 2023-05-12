@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: lyxnba01
+    url: jdbc:mysql://localhost:3306/community
+    hikari:
+      maximum-pool-size: 15
+      minimum-idle: 5
+      idle-timeout: 30000
+    type: com.zaxxer.hikari.HikariDataSource
+  thymeleaf:
+    cache: true
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.example.entity
+  configuration:
+    use-generated-keys: true
+    map-underscore-to-camel-case: true
+server:
+  servlet:
+    context-path: /community
+  port: 8080
+
+
